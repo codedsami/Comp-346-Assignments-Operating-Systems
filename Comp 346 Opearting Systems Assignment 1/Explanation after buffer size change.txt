@@ -1,0 +1,19 @@
+The running times for the client and server threads seem to be almost same between the two cases,
+with slight variations in the milliseconds. However, the main difference lies in the running time of the
+network thread, which is slightly shorter in the case with the larger buffer size (20).
+
+This difference can be attributed to the fact that with a larger buffer size, there is less competetion for
+space in the network buffers. This means that transactions can be processed more efficiently, resulting in 
+slightly shorter running times for both the client and server threads.
+
+However, the difference in running time between the two buffer sizes is not significant. 
+
+Increasing the buffer size can improve the performance of the network by reducing competetion and 
+But the improvement may vary depending on the specific use case and system configuration.
+
+One thing was noticed that with a buffer size of 100, the program seems to work very fast as there are 
+enough space to fit 71 transactions at one time. On the other hand, a buffer size of 1 leads to a slower 
+completion time. This indicates that by increasing space, we can improve on time. 
+
+Overall, these changes also depend on the machine that the program is running on. A powerful machine 
+should work faster than a weaker one. Hence these changes of time are very dependable on various factors.
