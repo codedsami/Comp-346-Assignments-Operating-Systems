@@ -1,0 +1,41 @@
+/************
+ * Comp 346 Assignment 2
+ * Winter 2024
+ * Concordia University
+ * Miskat Mahmud 40250110
+ * Ryan Mazari 40241379
+ * Date: 14/03/2024
+ */
+
+Synchronized method vs Synchronized statement:
+
+We chose to go for synchronized statements for it allows to explicitly specify which code blocks need to be
+synchronized rather than having the entire method. In other words, if synchronization is needed for specific 
+code blocks within methods, synchronized statement offers more control as well as flexibility. Indeed, by 
+explicitly marking the critical sections with synchronized statements, the code becomes clearer and more explicit. 
+If we were to use synchronized methods, they would lock the entire method body, which may include both critical and 
+non-critical sections. As a result, it can lead to unnecessary locking of resources and increased contention.
+
+
+
+Busy-waiting vs Semaphores:
+
+Semaphores are a better choice than busy-waiting. Indeed, using semaphores allow threads to block until a particular 
+condition is met whereas busy-waiting involves repeatedly checking for a condition in a loop without yielding the CPU.
+As a consequence, the CPU is being occupied even when no progress is currently being made. This unfortunately leads to 
+inefficient ressource utilization. To put it simple, busy-waiting can drain battery life and reduce energy efficiency 
+by continuously using CPU unnecessarly. On the other hand, semaphores allow threads to block and conserve energy when waiting
+for ressources which lead to improve battery life and energy efficiency. In other words, semaphores provide a more efficient,
+better system performance, and ressource utilization than busy-waiting.
+
+
+
+3 Server threads vs 2 Server threads:
+
+Using three server threads is faster than using two sever threads. Indeed, the running times are smaller with three server threads.
+This is due to the fact that with three threads, the workload can be divided into smaller tasks. Each trade can handle a smaller 
+portion of the work which leads to more efficent utilization of available CPU ressources. In other words, the more threads a CPU can 
+execute at once, the more tasks it can complete and faster. Multithreading is a technique that can increase the speed and efficiency of 
+multitasking. On the other hand, too many threads can result in too much context switching between threads and thus decrease performance.
+
+
